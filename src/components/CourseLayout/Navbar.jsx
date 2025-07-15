@@ -1,75 +1,148 @@
-import React from 'react';
-import { FiBookmark, FiShoppingCart, FiBell, FiSearch, FiChevronDown } from 'react-icons/fi';
-import logo from "../../assets/Layout/logoLight.png";
-import Profile from "../../assets/Layout/girlsimg.png"
+import React, { useState } from "react";
+import { FiBookmark, FiShoppingCart, FiBell, FiMenu } from "react-icons/fi";
+import { MdSearch } from "react-icons/md";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import logo from "../../assets/Home/Navbar/logoLight.png";
+import Profile from "../../assets/Layout/girlsimg.png";
+import { Link } from "react-router-dom";
 
+export default function Navbar_C() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-export default function Navbar() {
   return (
-    <div  className="sticky top-[10px] 
-   mx-w-[1440px] h-[80px] bg-[#FFFFFF]  shadow-md flex items-center justify-between pr-[40px] pl-[40px] font-['Poppins']"
-    >
-      {/* Left Section: Logo & Explore */}
-      <div className="flex items-center gap-6 ">
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-[90px] h-[60px] object-contain"
-        />
-        <span className="flex items-center hover:text-orange-500">
-                     Explore
-                     <FiChevronDown className="ml-2 text-black" size={14} />
-                   </span>
-                   <ul className="absolute hidden group-hover:block bg-[#1D2026] text-gray-400 mt-2 py-2 w-48 rounded shadow-lg z-10">
-                     <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
-                       Course 101
-                     </li>
-                     <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
-                       Advanced AI
-                     </li>
-                     <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
-                       Data Bootcamp
-                     </li>
-                   </ul>
-                 
+    <div className="sticky top-[5px] z-50 w-full bg-white shadow-md font-['Poppins']">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between h-[80px] gap">
+        {/* Left Section: Logo */}
+        <div className="flex items-center gap-[50px]">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-[80px] h-[50px] object-contain lg:ml-6 cursor-pointer"
+            />
+          </Link>
 
+          {/* Hide Explore + Search on mobile */}
+          <div className="hidden lg:flex items-center gap-[80px]">
+            {/* Explore */}
+            <div className="relative group cursor-pointer text-base font-medium">
+              <span
+                className="flex items-center hover:text-orange-500 mx-8 text-[#1B1B1B]"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Explore
+                {isHovered ? (
+                  <FaChevronUp className="ml-2 text-black" size={14} />
+                ) : (
+                  <FaChevronDown className="ml-2 text-black" size={14} />
+                )}
+              </span>
+              <div className="absolute top-full left-0 mt-1 w-50 bg-white shadow-lg rounded-md py-1 hidden group-hover:block z-10">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-orange-50"># Option 1</li>
+                  <li className="px-4 py-2 hover:bg-orange-50"># Option 2</li>
+                  <li className="px-4 py-2 hover:bg-orange-50"># Option 3</li>
+                  <li className="px-4 py-2 hover:bg-orange-50"># Option 4</li>
+                  <li className="px-4 py-2 hover:bg-orange-50"># Option 5</li>
+                </ul>
+              </div>
+            </div>
 
-          <div className="w-[660px] h-[60px] font-poppins flex items-center justify-center">
-        <div className="w-[406px] h-[37px] flex items-center bg-[#F6F6F6] font-poppins rounded-md px-4">
-          <input
-            type="text"
-            placeholder="What do you want do learn ?"
-            className="bg-transparent flex-grow outline-none text-sm placeholder-gray-500"
-          />
-          <FiSearch size={20} />
+            {/* Search */}
+            <div className="flex items-center bg-[#F6F6F6] rounded-md px-4 w-[406px] ">
+              <input
+                type="text"
+                placeholder="What do you want to learn?"
+                className="bg-transparent flex-grow outline-none text-sm placeholder-gray-500 py-2"
+              />
+              <MdSearch size={20} />
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-6">
+          {/* Hide icons on very small screens */}
+          <div className="hidden sm:flex items-center gap-6">
+            <FiBookmark size={24} className="text-black" />
+            <FiShoppingCart size={24} className="text-black" />
+            <div className="relative">
+              <FiBell size={24} className="text-black" />
+              <span className="absolute top-0 right-0 w-2 h-2 bg-orange-500 rounded-full" />
+            </div>
+            <img
+              src={Profile}
+              alt="Profile"
+              className="w-9 h-9 rounded-full object-cover"
+            />
+          </div>
+
+          {/* Hamburger on mobile */}
+          <button
+            className="block lg:hidden text-black"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <FiMenu size={24} />
+          </button>
         </div>
       </div>
 
+      {/* Mobile Dropdown */}
+      {mobileMenuOpen && (
+        <div className="bg-white shadow-md px-4 py-4 lg:hidden">
+          <div className="flex flex-col gap-4">
+            <div className="relative group cursor-pointer text-base font-medium">
+              <span
+                className="flex items-center hover:text-orange-500"
+                onClick={() => setIsHovered(!isHovered)}
+              >
+                Explore
+                {isHovered ? (
+                  <FaChevronUp className="ml-2 text-black" size={14} />
+                ) : (
+                  <FaChevronDown className="ml-2 text-black" size={14} />
+                )}
+              </span>
+              {isHovered && (
+                <div className="mt-2 w-full bg-white shadow rounded-md py-1 z-10">
+                  <ul>
+                    <li className="px-4 py-2 hover:bg-orange-50"># Option 1</li>
+                    <li className="px-4 py-2 hover:bg-orange-50"># Option 2</li>
+                    <li className="px-4 py-2 hover:bg-orange-50"># Option 3</li>
+                    <li className="px-4 py-2 hover:bg-orange-50"># Option 4</li>
+                    <li className="px-4 py-2 hover:bg-orange-50"># Option 5</li>
+                  </ul>
+                </div>
+              )}
+            </div>
 
-      </div>
+            <div className="flex items-center bg-[#F6F6F6] rounded-md px-4">
+              <input
+                type="text"
+                placeholder="What do you want to learn?"
+                className="bg-transparent flex-grow outline-none text-sm placeholder-gray-500 py-2"
+              />
+              <FiSearch size={20} />
+            </div>
 
-      
-     
-
-      {/* Right Section: Icons */}
-     {/* Right Section */}
-<div className="flex items-center gap-10">
-  <FiBookmark      size={24} className="text-black" />
-  <FiShoppingCart  size={24} className="text-black" />
-
-  {/* Notification with dot */}
-  <div className="relative">
-    <FiBell size={24} className="text-black" />
-    <span className="absolute top-0 right-0 w-2 h-2 bg-orange-500 rounded-full" />
-  </div>
-
-  {/* Profile */}
-  <img
-    src={Profile}
-    alt="Profile"
-    className="w-9 h-9 rounded-full object-cover"
-  />
-</div>
-</div>
+            <div className="flex items-center gap-6 mt-2">
+              <FiBookmark size={24} className="text-black" />
+              <FiShoppingCart size={24} className="text-black" />
+              <div className="relative">
+                <FiBell size={24} className="text-black" />
+                <span className="absolute top-0 right-0 w-2 h-2 bg-orange-500 rounded-full" />
+              </div>
+              <img
+                src={Profile}
+                alt="Profile"
+                className="w-9 h-9 rounded-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

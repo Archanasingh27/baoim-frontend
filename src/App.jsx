@@ -19,6 +19,10 @@ import Tuitor from './components/CourseLayout/Tuitor';
 import  Courses from './components/CourseLayout/courses';
 import Banner from './components/CourseLayout/Banner';
 import Navbar1 from './components/CourseLayout/Navbar';
+import Hero from "./components/Pride/HeroSection";
+import HeroCourse from './components/CourseLayout/HeroSection_C'
+import Certificate from './components/CourseLayout/Certificate';
+import DiscountBanner from './components/CourseLayout/DiscountBanner'
 function App() {
 
   
@@ -29,19 +33,25 @@ function App() {
      <HeroSection/>
      <Member />
      <Prestige /> 
-     <Banner />   
+     <Banner /> 
+     <Member />  
      <Contact/> 
      <Footer />
      <OurProgram/> 
      <OurFeatures/>
      <InsightSection/>   */}
+
      <Navbar1/>
+     <HeroCourse/>
      <PurchaseCourse/> 
      <Tuitor/>
+     <Certificate/>
+     <DiscountBanner />
      <Courses/>
-      <Member />
+       
      <Banner/>
      <OurEvent/> 
+     <Hero/>
 
     </>
   )
