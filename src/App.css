@@ -6,3 +6,13 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+
+
+/* App.css */
+.slick-slide > div {
+  overflow: visible !important;
+}
+.slick-track {
+  overflow: visible !important;
+}
