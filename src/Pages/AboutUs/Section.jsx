@@ -16,7 +16,7 @@ const WhyUsSection = () => {
         </p>
       </div>
 
-      {/* Cards */}
+      {/* Cards  */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {/* Card 1 */}
         <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
