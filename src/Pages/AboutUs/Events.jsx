@@ -10,28 +10,27 @@ const EventsSection = () => {
   return (
     <div className="py-10 px-4 md:px-10 bg-[#FAFAFA] text-center">
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-2">
+      <h2 className="text-[48px] font-bold mb-2">
         Beyond the Screen: <span className="text-orange-500">Our Events</span>
       </h2>
-      <p className="text-gray-600 mb-8">
+      <p className="text-black text-[24px] mb-8">
         Workshops, expert sessions, and team collaborations that matter.
       </p>
 
       {/* Image Grid */}
      <div className="flex justify-center items-center w-full py-5">
   <div className="grid grid-cols-4 grid-rows-2 gap-4 p-4 max-w-5xl bg-white border-4 border-[#D7D7D7]  w-full">
-   
-    {/* Large image on left  */}
+    {/* image on left  */}
     <div className="row-span-2">
       <img src={img1} alt="Event 1" className="w-full h-full object-cover rounded-md" />
     </div>
 
-    {/*  image col-2 */}
+    {/*image 2-columns */}
     <div className="col-span-2">
       <img src={img2} alt="Event 2" className="w-full h-full object-cover rounded-md" />
     </div>
 
-    {/* img-3 &4 */}
+    {/* images 3&4 */}
     <div className="col-start-2 row-start-2">
       <img src={img3} alt="Event 3" className="w-full h-full object-cover rounded-md" />
     </div>
