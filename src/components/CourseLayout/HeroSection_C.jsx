@@ -36,10 +36,11 @@ import DS from "../../assets/Layout/CoursePage/DS.png";
 
 export default function HeroSection_C() {
   return (
-    <div className="bg-white font-['Poppins']">
+    <div className="  max-w-[1440px] bg-white font-['Poppins']">
       {/* Breadcrumbs */}
 
-      <div className="max-w-9/10 mx-auto p-4 md:flex md:space-x-8 mt-10">
+      <div className="max-w-[90%] mx-auto p-4 flex flex-wrap md:flex-nowrap gap-8 mt-10">
+
         {/* Left Side */}
         <div className="flex-1 text-[18px]">
           <nav className="flex items-center text-black sm:text-lg md:text-[18px]  mb-10">
@@ -143,7 +144,7 @@ export default function HeroSection_C() {
             <h2 className="text-[24px] font-semibold mb-6  text-black">
               What will you learn?
             </h2>
-            <div className="flex flex-wrap gap-2 ">
+            <div className="flex flex-wrap gap-2 cursor-default ">
               {[
                 "Python",
                 "NumPy",
@@ -169,7 +170,7 @@ export default function HeroSection_C() {
 
           {/* Prerequisites */}
           <section>
-            <h2 className="text-[24px] font-semibold mb-4 ">
+            <h2 className="text-[24px] font-semibold font-poppins mb-4 ">
               Prerequisites for this course:
             </h2>
             <ul className="list-disc list-inside text-[18px] font-poppins text-black space-y-1 ml-3">
@@ -184,7 +185,7 @@ export default function HeroSection_C() {
         {/* Right Side */}
         <aside className="md:mt-0 ">
           <div className=" rounded-lg p-4 border-[2px] border-[#99999966]">
-            <div className="bg-[#FF6501] text-white  rounded-lg px-4 py-2 mb-8">
+            <div className="bg-[#FF6501]  text-white  rounded-lg px-4 py-2 mb-8">
            <p className="text-[21px] font-medium  mx-2 ">
              20,000+  Openings.  ₹7 LPA Median. You Could Be Next!
             </p>
@@ -194,7 +195,7 @@ export default function HeroSection_C() {
          </div>
 
 
-            <div className="relative mb-4 rounded-xl overflow-hidden w-[527px] h-[320px]">
+            <div className="relative mb-4 rounded-xl overflow-hidden w-full max-w-[527px] h-[320px] mx-auto md:mx-0">
               <img
                 src={DS}
                 alt="Course Preview"

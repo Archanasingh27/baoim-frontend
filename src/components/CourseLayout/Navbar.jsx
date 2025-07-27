@@ -11,10 +11,10 @@ export default function Navbar_C() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-[5px] z-50 w-full bg-white shadow-md font-['Poppins']">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between h-[80px] gap">
+    <div className="sticky top-[5px] z-50  bg-white shadow-md font-['Poppins']">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between h-[80px] gap-x-4 md:gap-x-[80px]">
         {/* Left Section: Logo */}
-        <div className="flex items-center gap-[50px]">
+        <div className="flex items-center gap-[40px]">
           <Link to="/">
             <img
               src={logo}
@@ -24,7 +24,8 @@ export default function Navbar_C() {
           </Link>
 
           {/* Hide Explore + Search on mobile */}
-          <div className="hidden lg:flex items-center gap-[80px]">
+          <div className="hidden lg:flex items-center gap-8 xl:gap-[80px]">
+
             {/* Explore */}
             <div className="relative group cursor-pointer text-base font-medium">
               <span
@@ -51,7 +52,7 @@ export default function Navbar_C() {
             </div>
 
             {/* Search */}
-            <div className="flex items-center bg-[#F6F6F6] rounded-md px-4 w-[406px] ">
+           <div className="flex items-center bg-[#F6F6F6] rounded-md px-4 w-full max-w-[400px]">
               <input
                 type="text"
                 placeholder="What do you want to learn?"

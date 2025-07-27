@@ -10,6 +10,7 @@ export default function CertificateSection() {
           Get <span className="text-orange-500">Govt. Recognised</span> Certificate
         </h2>
         <p className="mt-2 text-black  font-poppins text-[16px] md:text-base">
+    
           Our MSME recognised Certificate would increase your chances towards the steps of employment
         </p>
       </div>

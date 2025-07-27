@@ -2,9 +2,9 @@
 import React from 'react'
 import './App.css'
 // import Footer from './components/Footer'
-// import Contact from './components/Contact'
-//import Navbar from './components/Home/Member'
-import Member from './components/Home/Member'
+import Contact from './components/Contact'
+import Navbar from './components/Navbar'
+//import Member from './components/Home/Member'
 // import Partner from './components/Home/Member'
 // import Prestige from './components/Prestige'
 // import Banner from './components/Home/Banner'
@@ -18,11 +18,20 @@ import PurchaseCourse from './components/CourseLayout/Purchase';
 import Tuitor from './components/CourseLayout/Tuitor';
 import  Courses from './components/CourseLayout/courses';
 import Banner from './components/CourseLayout/Banner';
-import Navbar1 from './components/CourseLayout/Navbar';
+//import Navbar1 from './components/CourseLayout/Navbar';
 import Hero from "./components/Pride/HeroSection";
 import HeroCourse from './components/CourseLayout/HeroSection_C'
 import Certificate from './components/CourseLayout/Certificate';
 import DiscountBanner from './components/CourseLayout/DiscountBanner'
+import Learning from './components/CourseLayout/learning';
+import Term from './components/Term&Cond/Term';
+import Privacy from './components/Term&Cond/Privacy';
+import Founder from'./components/Term&Cond/Founder';
+import BlogSection from "./components/Blogs/BlogSection";
+import About from './Pages/AboutUs/AboutUs.jsx';
+
+
+
 function App() {
 
   
@@ -35,14 +44,15 @@ function App() {
      <Prestige /> 
      <Banner /> 
      <Member />  
-     <Contact/> 
+     
      <Footer />
      <OurProgram/> 
      <OurFeatures/>
      <InsightSection/>   */}
-
-     <Navbar1/>
+{/* 
+     <Navbar/>
      <HeroCourse/>
+     <Learning/>
      <PurchaseCourse/> 
      <Tuitor/>
      <Certificate/>
@@ -50,9 +60,15 @@ function App() {
      <Courses/>
        
      <Banner/>
+
      <OurEvent/> 
      <Hero/>
-
+     <Contact/> 
+     <Founder/>
+       <Privacy/> */}
+    {/* <BlogSection /> */}
+    <About/>
+    
     </>
   )
 }

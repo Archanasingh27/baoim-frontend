@@ -101,7 +101,7 @@ const Experts = () => {
   };
 
   return (
-    <div className="w-[1440px] h-[394px] border-b-2 border-gray-200 mx-auto flex flex-col items-center justify-center relative">
+    <div className="max-w-[1440px] h-[394px] border-b-2 border-gray-200 mx-auto flex flex-col items-center justify-center relative">
       <h2 className="text-4xl font-bold mb-8">Taught by the best</h2>
 
       <div className="relative w-[1400px]  flex items-center justify-center overflow-hidden">
