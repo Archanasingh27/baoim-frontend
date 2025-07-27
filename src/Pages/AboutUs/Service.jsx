@@ -3,7 +3,7 @@ import img3 from "../../assets/Pages/About/im3.jpg";
 const services = [
   {
     title: 'Nexnott Dating App – for people who want real, not random.',
-    image: img3, // replace with actual path or URL
+    image: img3, 
   },
   {
     title: 'Courses that will worth your time—training and job-ready.',
@@ -66,7 +66,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* CTA Banner */}
+      {/* Banner */}
       <div
         className="mt-16 relative bg-cover bg-center rounded-xl overflow-hidden text-white"
         style={{
