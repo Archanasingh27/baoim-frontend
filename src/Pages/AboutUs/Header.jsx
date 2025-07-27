@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/Navbar.jsx'
+import Navbar from '../../components/Home/Navbar.jsx'
 import img1 from "../../assets/Pages/About/img1.jpg";
 
 
