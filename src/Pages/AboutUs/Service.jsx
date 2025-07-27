@@ -3,7 +3,7 @@ import img3 from "../../assets/Pages/About/im3.jpg";
 const services = [
   {
     title: 'Nexnott Dating App – for people who want real, not random.',
-    image: img3, 
+    image: img3, // replace with actual path or URL
   },
   {
     title: 'Courses that will worth your time—training and job-ready.',
@@ -23,22 +23,22 @@ const ServicesSection = () => {
   return (
     <div className="py-12 px-4 md:px-10 bg-white text-center">
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <h2 className="text-[48px] font-semibold mb-4">
         Our <span className="text-orange-500">Services</span>
       </h2>
-      <p className="text-gray-700 mb-20">
+      <p className="text-black text-[24px] mb-20">
         Designed to Support, Guide, and Inspire Your Growth.
       </p>
 
       {/* Service Cards */}
-      <div className="space-y-6 max-w-3xl mx-auto">
+      <div className="space-y-6 max-w-5xl mx-auto">
         {/* Cards data*/}
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-4 gap-15 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-4 gap-20 max-w-[1104px] h-[320px] mb-20  mx-auto">
         {services.map((service, index) => (
           <div key={index} className="relative flex flex-col items-center">
  
   {/* Image */}
-  <div className="absolute -top-10 w-25 h-25 rounded-full border-2 border-orange-500 bg-white p-1 z-10">
+  <div className="absolute -top-10 w-[150px] h-[150px] rounded-full border-4 border-orange-500 bg-white p-1 z-10">
     <img src={service.image} alt="Service" className="w-full h-full object-cover rounded-full" />
   </div>
 
@@ -54,10 +54,10 @@ const ServicesSection = () => {
   >
 
     {/* Text */}
-    <p className="text-sm text-gray-800 mt-5">{service.title}</p>
+    <p className="text-[20px] text-gray-800 mt-16">{service.title}</p>
      
 
-    <div className="absolute bottom-5 left-1/2  transform -translate-x-1/2 translate-y-1/2 w-0 h-0 border-l-[60px] border-r-[60px] border-t-[20px] border-l-transparent border-r-transparent border-t-orange-500"></div>
+    <div className="absolute bottom-6 left-1/2  transform -translate-x-1/2 translate-y-1/2 w-0 h-0 border-l-[70px] border-r-[70px] border-t-[20px] border-l-transparent border-r-transparent border-t-orange-500"></div>
 
   </div>
 </div>
@@ -66,7 +66,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* Banner */}
+      {/* CTA Banner */}
       <div
         className="mt-16 relative bg-cover bg-center rounded-xl overflow-hidden text-white"
         style={{
@@ -99,3 +99,5 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
+
